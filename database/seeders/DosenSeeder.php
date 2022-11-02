@@ -17,7 +17,7 @@ class DosenSeeder extends Seeder
     public function run()
     {
         $faker = Faker::create('id_ID');
-        for($i=0; $i <= 50; $i++){
+        for ($i = 0; $i <= 30; $i++) {
             DB::table('dosens')->insert(
                 [
                     'nidn' => rand(0000000000, 9999999999),

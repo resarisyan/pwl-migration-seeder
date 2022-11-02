@@ -20,7 +20,7 @@ class KrsSeeder extends Seeder
     public function run()
     {
         $faker = Faker::create('id_ID');
-        for($i=0; $i <= 50; $i++){
+        for ($i = 0; $i <= 30; $i++) {
             $mahasiswa = Mahasiswa::inRandomOrder()->first();
             $matakuliah = Matakuliah::inRandomOrder()->first();
 

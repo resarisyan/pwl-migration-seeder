@@ -16,12 +16,12 @@ class MatakuliahSeeder extends Seeder
     public function run()
     {
         $matakuliah = ['Basis Data', 'Pemrograman Mobile', 'Pemrograman Web Lanjut', 'Multimedia', 'Pemrograman Dasar'];
-        for($i=0; $i <= 50; $i++){
+        for ($i = 0; $i <= 30; $i++) {
             DB::table('matakuliahs')->insert(
                 [
                     'kode_matakuliah' => 'IF' . rand(00000, 99999),
-                    'nama_matakuliah' => array_rand($matakuliah,3)[0],
-                    'sks' => rand(1,4),
+                    'nama_matakuliah' => array_rand($matakuliah, 3)[0],
+                    'sks' => rand(1, 4),
                 ]
             );
         }

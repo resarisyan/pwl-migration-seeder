@@ -19,7 +19,7 @@ class JadwalSeeder extends Seeder
     public function run()
     {
         $faker = Faker::create('id_ID');
-        for($i=0; $i <= 50; $i++){
+        for ($i = 0; $i <= 30; $i++) {
             $dosen = Dosen::inRandomOrder()->first();
             $matakuliah = Matakuliah::inRandomOrder()->first();
 
@@ -28,8 +28,8 @@ class JadwalSeeder extends Seeder
                     'id' => $faker->unique()->randomNumber(),
                     'kode_matakuliah' => $matakuliah->kode_matakuliah,
                     'nidn' => $dosen->nidn,
-                    'kelas' => $faker->randomElement(['A','B','C','D']),
-                    'hari' => $faker->randomElement(['Senin','Selasa','Rabu','Kamis',"Jum'at", 'Sabtu']),
+                    'kelas' => $faker->randomElement(['A', 'B', 'C', 'D']),
+                    'hari' => $faker->randomElement(['Senin', 'Selasa', 'Rabu', 'Kamis', "Jum'at", 'Sabtu']),
                     'jam' => $faker->time()
                 ]
             );

@@ -18,11 +18,11 @@ class MahasiswaSeeder extends Seeder
     public function run()
     {
         $faker = Faker::create('id_ID');
-        for($i=0; $i <= 50; $i++){
+        for ($i = 0; $i <= 30; $i++) {
             $dosen = Dosen::inRandomOrder()->first();
             DB::table('mahasiswas')->insert(
                 [
-                    'npm' => rand(5520120000, 5520120999),
+                    'npm' => rand(5520120000, 5520129999),
                     'nidn' => $dosen->nidn,
                     'nama' => $faker->name,
                 ]
